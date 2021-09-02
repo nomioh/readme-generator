@@ -9,7 +9,7 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const questions = [
   {
     type: "input",
-    name: "Title of Your Project",
+    name: "title",
     message: "what is the title of your project?",
     validate: (projectInput) => {
       if (projectInput) {
@@ -22,12 +22,12 @@ const questions = [
   },
   {
     type: "input",
-    name: "Description",
+    name: "description",
     message: "Please provide a brief description of your project",
   },
   {
     type: "input",
-    name: "Installation-instruction",
+    name: "installation",
     message: "What are the installation instructions for your project?",
     validate: (instructionInput) => {
       if (instructionInput) {
@@ -41,39 +41,39 @@ const questions = [
   },
   {
     type: "input",
-    name: "Usage",
+    name: "usage",
     message: "Please provide any information about the usage of your project:",
   },
   {
     type: "list",
-    name: "Licence",
+    name: "licence",
     message: "Which licence are you using?",
     choices: ["Apache", "Academic", "GNU", "ISC", "MIT", "Mozilla", "Open"],
   },
   {
     type: "input",
-    name: "Credits",
+    name: "credits",
     message:
       "List your collaborators, if any, with links to their GitHub profiles.",
   },
   {
     type: "input",
-    name: "Contribution",
+    name: "contribution",
     message: "Please provide guidlines for contributors:",
   },
   {
     type: "input",
-    name: "Testing",
+    name: "testing",
     message: "Please provide any instructions for testing your app:",
   },
   {
     type: "input",
-    name: "Username",
+    name: "username",
     message: "What is your github username?",
   },
   {
     type: "input",
-    name: "Email",
+    name: "email",
     message: "What is your email?",
   },
 ];
@@ -81,9 +81,9 @@ const questions = [
 // TODO: Create a function to write README file
 
 function writeForFile(fileName, data) {
-  false.writeFile(fileName, data, function (err) {
+  fs.writeFile(fileName, data, function (err) {
     if (err) throw err;
-    console.log("Your file is ready!");
+    console.log("Your file is complete!");
   });
 }
 
@@ -93,6 +93,15 @@ function init() {
     writeForFile("README2.md", generateMarkdown(data));
   });
 }
+
+// TODO: Create a function to initialize app
+//function init(questions) {
+// inquirer
+// .prompt(questions)
+// .then(function (data) =>
+//  writeToFile("README2.md", generateMarkdown(data), "README file complete")
+// );
+//}
 
 // Function call to initialize app
 init();

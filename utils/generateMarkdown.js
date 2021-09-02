@@ -1,19 +1,19 @@
 // function to generate markdown for readme
-
 function generateMarkdown(data) {
   return `
-  <h1 align="center">${data.title}</h1>
+<h1 align="center">${data.title}</h1>
   
 ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)<br />
 ## Description
    ${data.description}
 ## Table of Contents
 - [Description](#description)
-- [Installation](#installation)
+- [Installation Instructions](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
+- [Credits](#credits)
+- [Contributing](#contribution)
+- [Testing](#testing)
 - [Questions](#questions)
 ## Installation
    ${data.installation}
@@ -23,6 +23,8 @@ function generateMarkdown(data) {
 ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)
 <br />
 This application is legally covered by the ${data.license} license. 
+##Credits
+![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.s[vg)](code_of_conduct.md) ${data.credits}
 ## Contributing
    ${data.contributing}
 ## Tests
