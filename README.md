@@ -4,7 +4,7 @@
 ## Description
    Generates readme.md file based off user's input.
 ## Video
-https://drive.google.com/file/d/1qO5BH1pVlCc_zEAchuJ8kSsYN9YId-6N/view?usp=sharing
+https://drive.google.com/file/d/1iX4mF3XeFbvb6zXTv2oJD69Euoo7ccZ3/view
 ## Table of Contents
 - [Description](#description)
 - [Installation Instructions](#installation)
